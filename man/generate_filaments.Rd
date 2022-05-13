@@ -86,7 +86,7 @@ data = generate_filaments(loop_number = 1,
 #Plot dataset coloured by ID, and opacity = n-photon
 library(scales)
 plot(data[,2:3], col = alpha(data[,1], alpha = data[,4]), pch = 16, cex = 0.1)
-
+}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
 % \keyword{ ~kwd1 }

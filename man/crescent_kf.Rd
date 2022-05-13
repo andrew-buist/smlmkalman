@@ -127,7 +127,6 @@ lines(test$x_hat, lwd = 2, col = "green")
 #Add legend
 legend('topleft', col = c("red", "green"),
 legend = c("Actual", "Predicted"), pch = 16)
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

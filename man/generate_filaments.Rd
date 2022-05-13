@@ -54,20 +54,8 @@ export_data, verbose)
 \value{
 A dataframe with 4 columns: the ID of each datapoint (which filament it belongs to), the x-position, the y-position, and the n-photon (simulated photonic emission), which is dependent upon the location, being boosted at the edges of the filament.
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Andrew Buist
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 #Generate dataset

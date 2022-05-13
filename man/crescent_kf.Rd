@@ -72,20 +72,10 @@ crescent_kf(x, p_length,
   A three-column dataframe, with the first two columns being equal to the input data (x), and the third column being a numeric ID of unobserved (allocated[,3] = 0) and observed (allocated[,3] >= 1) value, where the value of the ID indicates at which timestep they were observed.
   }
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Andrew Buist
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+ ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 #Generate loop-de-loop spline
@@ -118,7 +108,7 @@ plot(data_loopy, cex = 0.1)
 lines(data[,1:2], col = "red", lwd = 2)
 
 #Peform Kalman Filtering
-test =  crescent_KF(x = data_loopy, p_length = 1000, x_hat_s = c(data_loopy[1,1],data_loopy[1,2]),
+test =  crescent_kf(x = data_loopy, p_length = 1000, x_hat_s = c(data_loopy[1,1],data_loopy[1,2]),
 sigma_s = c(1,0,0,1), B_s = 0, d = 0.5,
 alpha = 1.1, beta = 10, gamma = 20)
 #Add prediction line in green

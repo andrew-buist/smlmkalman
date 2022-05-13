@@ -8,7 +8,7 @@
 A two-dimensional Kalman Filter for use in image segmentation of filamentous structures. Uses a novel "crescent sampling" method to generate the mean z value from local conditions, so time domain can be inferred from local point distribution.
 }
 \usage{
-crescent_KF(x, p_length,
+crescent_kf(x, p_length,
             x_hat_s, sigma_s,
             B_s, d,
             Q, R,

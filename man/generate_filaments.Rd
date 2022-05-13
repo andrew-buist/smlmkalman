@@ -19,7 +19,7 @@ export_data, verbose)
   Number of times the code should be repeated (to be used in conjunction with export_data to generate multiple .csv datasets)
 }
   \item{field_settings}{
-  A vector containg three elements: the plot minimum, the plot maximum, and the number of divisions between field values.
+  A vector containing three elements: the plot minimum, the plot maximum, and the number of divisions between field values.
   }
   \item{filament_settings}{
   A vector containing four elements: the number of filaments, the ratio of horizontal (0) to vertical (1) filaments, the standard deviation from beginning x/y location to endpoint x/y location, and the angle below which crossing filaments will bundle.

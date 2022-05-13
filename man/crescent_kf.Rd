@@ -90,7 +90,7 @@ library(spdep)
 for(i in 2:1000){
   data[i,1:2] = c(data[(i-1),1] + 1, data[(i-1),2])
   angle =  (data[i,3]*(pi/180))
-  data[i,1:2] = Rotation(as.vector(data[i,1:2] - data[(i-1),1:2]), angle) + data[(i-1),1:2]
+  data[i,1:2] = Rotation(as.matrix(data[i,1:2] - data[(i-1),1:2], nrow = 1, ncol = 2), angle) + data[(i-1),1:2]
 }
 
 #Randomly generate data around spline
@@ -107,14 +107,14 @@ lines(data[,1:2], col = "red", lwd = 2)
 
 #Peform Kalman Filtering
 test =  crescent_kf(x = data_loopy, p_length = 1000, x_hat_s = c(data_loopy[1,1],data_loopy[1,2]),
-sigma_s = c(1,0,0,1), B_s = 0, d = 0.5,
-alpha = 1.1, beta = 10, gamma = 20)
+                    sigma_s = c(10,0,0,10), B_s = 0, d = 0.75,
+                    alpha = 1.1, beta = 20, gamma = 15)
 #Add prediction line in green
 lines(test$x_hat, lwd = 2, col = "green")
 
 #Add legend
 legend('topleft', col = c("red", "green"),
-legend = c("Actual", "Predicted"), pch = 16)
+       legend = c("Actual", "Predicted"), pch = 16)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

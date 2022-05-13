@@ -50,7 +50,6 @@ crescent_kf = function(x, p_length = 1000, x_hat_s = c(0,0), sigma_s = c(10,0,0,
       B[1] = d
       B[2] = B_s
       }
-    print(B)
     #X_hat_k = Fk*x_hat_k-1
     x_hat = (Fk %*% x_hat) + (B %*% d)
     #Pk = Fk*Ftk*P_k-1 + Qk

@@ -6,7 +6,7 @@ Authors@R: c(person("Andrew", "Buist", role = c("aut", "cre"),
                      email = "ab1051@exeter.ac.uk"))
 Author: Andrew Buist [aut, cre]
 Maintainer: Andrew Buist <ab1051@exeter.ac.uk>
-Depends: R (>= 3.1.0), stats, spdep, pracma, scales, truncnorm
+Depends: R (>= 4.1.0), stats, spdep, pracma, scales, truncnorm
 Description: generate_filaments() creates a dataset made to simulate those produced in DNA-PAINT imaging of plant microtubules.
     crescent_kf() uses a local datapoint distributions to perform Kalman Filtering on data without time information.
 License: GPL-2

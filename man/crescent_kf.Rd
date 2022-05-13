@@ -90,7 +90,8 @@ library(spdep)
 for(i in 2:1000){
   data[i,1:2] = c(data[(i-1),1] + 1, data[(i-1),2])
   angle =  (data[i,3]*(pi/180))
-  data[i,1:2] = Rotation(as.matrix(data[i,1:2] - data[(i-1),1:2], nrow = 1, ncol = 2), angle) + data[(i-1),1:2]
+  data[i,1:2] = (Rotation(as.matrix(data[i,1:2] - data[(i-1),1:2], nrow = 1, ncol = 2), angle)
+  + data[(i-1),1:2])
 }
 
 #Randomly generate data around spline

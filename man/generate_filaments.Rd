@@ -59,14 +59,15 @@ Andrew Buist
 }
 
 \examples{
-#Generate dataset
+  \dontshow{
+  #Generate dataset
 data = generate_filaments(loop_number = 1,
                           field_settings = c(0, 100, 1),
-                          filament_settings = c(10, 0.3, 85, 17),
+                          filament_settings = c(2, 0, 1, 1),
                           single_bundling = TRUE,
                           bundling_dist = c(3,10),
-                          smoothing_settings = c(0.5, 10, 100),
-                          cylinder_settings = c(1000, 2, 1),
+                          smoothing_settings = c(0.3, 0, 1),
+                          cylinder_settings = c(500, 2, 1),
                           optics_settings = c(1, 0.3, 0.5),
                           visualise_code = c(FALSE, FALSE, 0),
                           export_data = c(FALSE, "data_"),
@@ -74,7 +75,26 @@ data = generate_filaments(loop_number = 1,
 
 #Plot dataset coloured by ID, and opacity = n-photon
 library(scales)
-plot(data[,2:3], col = alpha(data[,1], alpha = data[,4]), pch = 16, cex = 0.1)
+plot(data[,2:3], col = alpha(data[,1], alpha = data[,4]), pch = 16, cex = 0.3)
+  }
+  \dontrun{
+#Generate dataset
+data = generate_filaments(loop_number = 1,
+                          field_settings = c(0, 100, 1),
+                          filament_settings = c(5, 0.3, 85, 17),
+                          single_bundling = TRUE,
+                          bundling_dist = c(3,10),
+                          smoothing_settings = c(0.3, 5, 25),
+                          cylinder_settings = c(500, 2, 1),
+                          optics_settings = c(1, 0.3, 0.5),
+                          visualise_code = c(FALSE, FALSE, 0),
+                          export_data = c(FALSE, "data_"),
+                          verbose = TRUE)
+
+#Plot dataset coloured by ID, and opacity = n-photon
+library(scales)
+plot(data[,2:3], col = alpha(data[,1], alpha = data[,4]), pch = 16, cex = 0.3)
+  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

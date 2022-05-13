@@ -1,11 +1,10 @@
 Package: smlmkalman
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Functions for generating filamentous SMLM datasets and a crescent-based Kalman Filter for image segmentation.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Andrew Buist
+Maintainer: ab1051@exeter.ac.uk
+Description: generate_filaments() creates a dataset made to simulate those produced in DNA-PAINT imaging of plant microtubules. crescent_kf() uses a local datapoint distributions to perform Kalman Filtering on data without time information.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

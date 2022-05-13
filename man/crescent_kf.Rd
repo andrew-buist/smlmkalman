@@ -54,9 +54,7 @@ crescent_kf(x, p_length,
   A TRUE/FALSE statement which dictates whether or not, after z sampling, the error covariance matrix should be overwritten by the z sampling matrix (FALSE by default, when TRUE may cause unexpected errors/tracking paths!)
   }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
+
 \value{
   A list containing four elements:
   \item{x_hat}{
@@ -72,11 +70,11 @@ crescent_kf(x, p_length,
   A three-column dataframe, with the first two columns being equal to the input data (x), and the third column being a numeric ID of unobserved (allocated[,3] = 0) and observed (allocated[,3] >= 1) value, where the value of the ID indicates at which timestep they were observed.
   }
 }
+
 \author{
 Andrew Buist
 }
- ~~objects to See Also as \code{\link{help}}, ~~~
-}
+
 \examples{
 #Generate loop-de-loop spline
 data = as.data.frame(matrix(nrow = 1000, ncol = 3))

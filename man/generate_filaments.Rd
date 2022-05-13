@@ -49,14 +49,15 @@ export_data, verbose)
   A TRUE/FALSE statement that dictates whether the current place in the function loop should be printed to the terminal.
   }
 }
-\details{
-}
+
 \value{
 A dataframe with 4 columns: the ID of each datapoint (which filament it belongs to), the x-position, the y-position, and the n-photon (simulated photonic emission), which is dependent upon the location, being boosted at the edges of the filament.
 }
+
 \author{
 Andrew Buist
 }
+
 \examples{
 #Generate dataset
 data = generate_filaments(loop_number = 1,

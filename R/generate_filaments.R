@@ -9,11 +9,11 @@ generate_filaments = function(loop_number = 1,
                               visualise_code = c(FALSE, FALSE, 0),
                               export_data = c(FALSE, "data_"),
                               verbose = TRUE){
-#library(stats)
-#library(spdep)
-#library(pracma)
-#library(scales)
-#library(truncnorm)
+library(stats)
+library(spdep)
+library(pracma)
+library(scales)
+library(truncnorm)
 
 start.time = Sys.time()
 

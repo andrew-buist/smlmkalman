@@ -1,3 +1,9 @@
+#####
+#Code written by Andrew Buist, updated 16/05/22
+#A SMLM DNA-PAINT-like dataset generator for use in conjunction with crescent_kf() to produce
+#categorised training datasets to optimise hyperparameters, for subsequent real-data segmentation
+#####
+
 generate_filaments = function(loop_number = 1,
                               field_settings = c(0, 100, 1),
                               filament_settings = c(10, 0.3, 85, 17),

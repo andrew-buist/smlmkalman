@@ -1,3 +1,10 @@
+#####
+#Code written by Andrew Buist, updated 16/05/22
+#A kalman filter for the tracking of 2-d coordinates without a supplied time dimension,
+#inferring point likelihood by local, crescent-shaped regions for the z-update step.
+#Use cases: tracking dense, time-absent data; image segmentation of filamentous structures
+#####
+
 crescent_kf = function(x, p_length = 1000, x_hat_s = c(0,0), sigma_s = c(10,0,0,10),
                        B_s = 0, d = 1,
                        Q = c(1,0,0,1), R = c(10,0,0,10),

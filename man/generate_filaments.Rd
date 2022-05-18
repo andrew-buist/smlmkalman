@@ -1,9 +1,6 @@
 \name{generate_filaments}
 \alias{generate_filaments}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{generate_filaments
-%%  ~~function to do ... ~~
-}
+\title{generate_filaments}
 \description{
 A function which generates simulated SMLM datasets of filamentous objects capable of bundling. Modelled from the dynamics of plant microtubules imaged using DNA-PAINT techniques, but may be applicable to other scenarios.
 }
@@ -13,7 +10,6 @@ single_bundling, bundling_dist, smoothing_settings,
 cylinder_settings, optics_settings, visualise_code,
 export_data, verbose)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{loop_number}{
   Number of times the code should be repeated (to be used in conjunction with export_data to generate multiple .csv datasets)
@@ -77,7 +73,7 @@ data = generate_filaments(loop_number = 1,
 library(scales)
 plot(data[,2:3], col = alpha(data[,1], alpha = data[,4]), pch = 16, cex = 0.3)
   }
-  \dontrun{
+  \donttest{
 #Generate dataset
 data = generate_filaments(loop_number = 1,
                           field_settings = c(0, 100, 1),
@@ -96,12 +92,3 @@ library(scales)
 plot(data[,2:3], col = alpha(data[,1], alpha = data[,4]), pch = 16, cex = 0.3)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory (show via RShowDoc("KEYWORDS")):
-% \keyword{ ~kwd1 }
-% \keyword{ ~kwd2 }
-% Use only one keyword per line.
-% For non-standard keywords, use \concept instead of \keyword:
-% \concept{ ~cpt1 }
-% \concept{ ~cpt2 }
-% Use only one concept per line.

@@ -1,9 +1,6 @@
 \name{crescent_kf}
 \alias{crescent_kf}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{crescent_kf
-%%  ~~function to do ... ~~
-}
+\title{crescent_kf}
 \description{
 A two-dimensional Kalman Filter for use in image segmentation of filamentous structures. Uses a novel "crescent sampling" method to generate the mean z value from local conditions, so time domain can be inferred from local point distribution.
 }
@@ -15,7 +12,6 @@ crescent_kf(x, p_length,
             alpha, beta, gamma,
             overwrite)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
   The dataset to be tracked - a two-column matrix or dataframe of x and y values.
@@ -117,12 +113,3 @@ lines(test$x_hat, lwd = 2, col = "green")
 legend('topleft', col = c("red", "green"),
        legend = c("Actual", "Predicted"), pch = 16)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory (show via RShowDoc("KEYWORDS")):
-% \keyword{ ~kwd1 }
-% \keyword{ ~kwd2 }
-% Use only one keyword per line.
-% For non-standard keywords, use \concept instead of \keyword:
-% \concept{ ~cpt1 }
-% \concept{ ~cpt2 }
-% Use only one concept per line.

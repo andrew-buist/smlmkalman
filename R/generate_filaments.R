@@ -21,6 +21,8 @@ generate_filaments = function(loop_number = 1,
 #library(scales)
 #library(truncnorm)
 
+oldpar = par(no.readonly = TRUE)
+on.exit(par(oldpar))
 start.time = Sys.time()
 
 ##Do you want to see the process? How long between graphs (in s)?
@@ -546,7 +548,7 @@ cat(" Done!")
 
 if(debug.graphs == TRUE){
   png(filename = "cylinders_perturbed.png", height = 1000, width = 1000)
-  par(bg = "black")
+  par(bg = "black", fg = "white", col.axis = "white", col.lab = "white")
   plot(cylinders[,2:3], col = alpha("white", alpha = cylinders[,4]), cex = cylinders[,4]*.5, pch = 16)
   dev.off()
 }
@@ -554,10 +556,8 @@ if(debug.graphs == TRUE){
   if(export.data == TRUE){
     write.csv(x = cylinders, file = paste(export_data[2], loops, ".csv", sep = ""), row.names = FALSE)
   }
-  old.par = par(no.readonly = TRUE)
-  par(mar = c(0,0,0,0), mfrow = c(1,1), bg = "black")
+  par(bg = "black", fg = "white", col.axis = "white", col.lab = "white")
   plot(cylinders[,2:3], col = alpha("white", (cylinders[,4])/2), pch = 16, cex = (cylinders[,4])/2)
-  par(old.par)
 }
 end.time = Sys.time()
 time.taken = difftime(end.time, start.time, units = "secs")
